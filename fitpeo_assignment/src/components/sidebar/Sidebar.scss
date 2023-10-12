@@ -1,0 +1,91 @@
+@import '../../styles/_mixin.scss';
+
+.sidebar {
+    background-color: #040440;
+    color: #fff;
+    position: fixed;
+    width: 250px;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .heading {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .icon {
+        padding-right: 10px;
+    }
+
+    ul {
+        padding-top: 30px;
+
+        li {
+            padding: 5px 3px;
+        }
+    }
+
+    a {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #707498;
+        padding: 8px 10px;
+        border-radius: 5px;
+
+        .icons {
+            padding-right: 10px;
+        }
+
+        &:hover {
+            background-color: #2d2d69;
+            color: #fff;
+        }
+
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #707498;
+        background-color: #2d2d69;
+        padding: 8px;
+        border-radius: 5px;
+
+        &_img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+        }
+
+        &_details {
+            display: flex;
+            align-items: center;
+
+            .text {
+                padding-left: 10px;
+
+                .name {
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: #fff;
+                }
+
+                .role {
+                    font-size: 10px;
+                    font-weight: 400;
+                }
+            }
+
+
+        }
+
+    }
+}
