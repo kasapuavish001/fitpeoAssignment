@@ -1,5 +1,135 @@
 .main {
     position: relative;
     left: 250px;
+    width: 80vw;
     height: 100vh;
+    padding: 20px 30px;
+
+
+    .name {
+        font-size: 18px;
+        font-weight: 600;
+
+        .icon {
+            color: gold;
+        }
+    }
+
+    .searchbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .inputblock {
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+
+            .searchicon {
+                color: grey;
+                padding-right: 5px;
+            }
+        }
+
+        input {
+            border: none;
+        }
+    }
+
+    .cardblock {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+
+    .graph {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+
+        .bargraph {
+            width: 65%;
+            height: 400px;
+            background-color: #fff;
+            padding: 40px 20px;
+            padding-top: 20px;
+            border-radius: 10px;
+        }
+
+        .block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+            .sidetext {
+                padding: 5px;
+                background-color: #f2efff;
+                font-size: 12px;
+                font-weight: 500;
+                border-radius: 5px;
+                color: #a9a7a7;
+            }
+        }
+
+        .textblock {
+            .text {
+                font-size: 15px;
+                font-weight: 700;
+
+                &:last-child {
+                    padding-top: 5px;
+                    font-size: 10px;
+                    font-weight: 500;
+                    color: #cccccc;
+                }
+            }
+        }
+
+        .chartgraph {
+            width: 30%;
+            background-color: #fff;
+            padding: 40px 20px;
+            padding-top: 20px;
+            border-radius: 10px;
+        }
+    }
+
+    .chartjs-tooltip {
+        display: none;
+    }
+
+    .graphtext {
+        font-size: 14px;
+        font-weight: 500;
+
+        &:first-child {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+
+    .datatable {
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+
+        .inputblock {
+            background-color: #f2efff;
+            margin-right: 10px;
+
+            input {
+                background-color: #f2efff;
+            }
+        }
+
+        .block {
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            background-color: #f2efff;
+        }
+    }
 }

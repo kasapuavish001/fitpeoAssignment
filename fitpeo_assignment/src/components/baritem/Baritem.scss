@@ -1,0 +1,20 @@
+.bar-item {
+    flex: 1;
+    height: 100%;
+    background-color: #f2efff;
+    border-radius: 10px;
+    position: relative;
+
+    .month {
+        position: absolute;
+        bottom: -30px;
+        left: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #848181;
+    }
+}
+
+.bar-item:hover {
+    background-color: #5a32ea;
+}
