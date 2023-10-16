@@ -113,12 +113,12 @@
     .datatable {
         margin-top: 30px;
         padding: 20px;
+        padding-bottom: 0;
         border-radius: 10px;
         background-color: #fff;
 
         .inputblock {
             background-color: #f2efff;
-            margin-right: 10px;
 
             input {
                 background-color: #f2efff;
@@ -129,7 +129,13 @@
             padding: 0 10px;
             display: flex;
             align-items: center;
-            background-color: #f2efff;
+
+            .blocktext {
+                border-radius: 5px;
+                background-color: #f2efff;
+                padding: 5px;
+                margin: 0 10px;
+            }
         }
     }
 }

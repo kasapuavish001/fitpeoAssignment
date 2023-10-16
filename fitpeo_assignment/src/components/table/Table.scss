@@ -1,0 +1,49 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+
+    thead {
+        border-bottom: 2px solid rgb(203, 200, 200);
+    }
+
+    th {
+        text-align: start;
+    }
+
+    tr {
+        text-align: center;
+
+        td {
+            padding: 10px 0;
+            font-size: 14px;
+            font-weight: 400;
+
+            &:first-child {
+                display: flex;
+                align-items: center;
+            }
+
+            &:nth-child(3) {
+                font-weight: 600;
+            }
+
+            img {
+                width: 100px;
+                height: 50px;
+                margin-right: 10px;
+                border-radius: 5px;
+            }
+
+            .name {
+                text-align: start;
+            }
+
+            .text {
+                font-size: 10px;
+                font-weight: 600;
+                color: #949ab4;
+            }
+        }
+    }
+}

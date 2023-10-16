@@ -5,6 +5,7 @@ import Cards from '../cards/Cards';
 import './Main.scss';
 
 import { CChart } from '@coreui/react-chartjs';
+import Component from '../table/Table';
 const data = [
     {
         id: 1,
@@ -166,9 +167,10 @@ const Main = () => {
                             <FontAwesomeIcon icon={faMagnifyingGlass} className='searchicon' />
                             <input type="text" placeholder='Search' />
                         </div>
-                        <p>last 30 days<FontAwesomeIcon icon={faChevronDown} className='arrow' /></p>
+                        <p className='blocktext'>last 30 days<FontAwesomeIcon icon={faChevronDown} className='arrow' /></p>
                     </div>
                 </div>
+                <Component />
             </div>
         </div>
     )
