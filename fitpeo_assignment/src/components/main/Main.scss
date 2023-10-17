@@ -10,6 +10,7 @@
     @include mobile {
         left: 0;
         width: 100%;
+        padding: 20px 10px;
     }
 
     .name {
@@ -85,15 +86,20 @@
             }
 
             .chart-wrapper {
+                margin-bottom: 10px;
+
                 canvas {
                     @include xs {
                         height: 330px !important;
                     }
 
-                    @include tiny {
+                    @include xl-tiny {
                         height: 200px !important;
-                        width: 200px !important;
+                        width: 220px !important;
                     }
+
+
+
                 }
             }
         }
