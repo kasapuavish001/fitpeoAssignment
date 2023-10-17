@@ -3,6 +3,40 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import img from '../../images/profilepic.jpg';
 import './Sidebar.scss';
+
+const option = [
+    {
+        id: 1,
+        name: "Dashboard",
+        icon: <FontAwesomeIcon icon={faKey} className='icons' />,
+    },
+    {
+        id: 2,
+        name: "Product",
+        icon: <FontAwesomeIcon icon={faBox} className='icons' />,
+    },
+    {
+        id: 3,
+        name: "Customers",
+        icon: <FontAwesomeIcon icon={faUser} className='icons' />,
+    },
+    {
+        id: 4,
+        name: "Income",
+        icon: <FontAwesomeIcon icon={faMoneyCheck} className='icons' />,
+    },
+    {
+        id: 5,
+        name: "Promote",
+        icon: <FontAwesomeIcon icon={faPercent} className='icons' />,
+    },
+    {
+        id: 6,
+        name: "Help",
+        icon: <FontAwesomeIcon icon={faCircleQuestion} className='icons' />,
+    },
+
+]
 const Sidebar = () => {
     const [menu, setMenu] = useState(false);
     return (
@@ -16,12 +50,12 @@ const Sidebar = () => {
                     <p className="heading"><FontAwesomeIcon icon={faGear} className='icon' />Dashboard</p>
                     <ul>
                         {menu && <li onClick={() => { setMenu(!menu) }}><a href="#"><span><FontAwesomeIcon icon={faXmark} className='icons' />Close</span></a></li>}
-                        <li><a href="#"><span><FontAwesomeIcon icon={faKey} className='icons' />Dashboard</span></a></li>
-                        <li><a href="#"><span><FontAwesomeIcon icon={faBox} className='icons' />Product</span><FontAwesomeIcon className='arrow' icon={faAngleRight} /></a></li>
-                        <li><a href="#"><span><FontAwesomeIcon icon={faUser} className='icons' />Customers</span><FontAwesomeIcon className='arrow' icon={faAngleRight} /></a></li>
-                        <li><a href="#"><span><FontAwesomeIcon icon={faMoneyCheck} className='icons' />Income</span><FontAwesomeIcon className='arrow' icon={faAngleRight} /></a></li>
-                        <li><a href="#"><span><FontAwesomeIcon icon={faPercent} className='icons' />Promote</span><FontAwesomeIcon className='arrow' icon={faAngleRight} /></a></li>
-                        <li><a href="#"><span><FontAwesomeIcon icon={faCircleQuestion} className='icons' />Help</span><FontAwesomeIcon className='arrow' icon={faAngleRight} /></a></li>
+
+                        {option.map((item) => {
+                            return (
+                                <li key={item.id}><a href="#"><span>{item.icon}{item.name}</span><FontAwesomeIcon className='arrow' icon={faAngleRight} /></a></li>
+                            )
+                        })}
                     </ul>
                 </div><div className="profile">
                         <div className="profile_details">

@@ -26,10 +26,19 @@
         align-items: center;
         justify-content: space-between;
 
+        @include mobile {
+            flex-direction: column;
+
+        }
+
         .inputblock {
             background-color: #fff;
             padding: 5px 10px;
             border-radius: 5px;
+
+            @include mobile {
+                margin: 10px 0;
+            }
 
             .searchicon {
                 color: grey;
@@ -54,6 +63,10 @@
         justify-content: space-between;
         padding-top: 30px;
 
+        @include mobile {
+            flex-direction: column;
+        }
+
         .bargraph {
             width: 65%;
             height: 400px;
@@ -61,6 +74,28 @@
             padding: 40px 20px;
             padding-top: 20px;
             border-radius: 10px;
+
+            @include mobile {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            @media (max-width : 320px) {
+                height: 260px;
+            }
+
+            .chart-wrapper {
+                canvas {
+                    @include xs {
+                        height: 330px !important;
+                    }
+
+                    @include tiny {
+                        height: 200px !important;
+                        width: 200px !important;
+                    }
+                }
+            }
         }
 
         .block {
@@ -99,6 +134,10 @@
             padding: 40px 20px;
             padding-top: 20px;
             border-radius: 10px;
+
+            @include mobile {
+                width: 100%;
+            }
         }
     }
 
@@ -126,6 +165,10 @@
         .inputblock {
             background-color: #f2efff;
 
+            @include xs {
+                display: flex;
+            }
+
             input {
                 background-color: #f2efff;
             }
@@ -135,6 +178,10 @@
             padding: 0 10px;
             display: flex;
             align-items: center;
+
+            @include xs {
+                flex-direction: column;
+            }
 
             .blocktext {
                 border-radius: 5px;

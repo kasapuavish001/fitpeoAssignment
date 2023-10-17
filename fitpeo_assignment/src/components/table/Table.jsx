@@ -36,36 +36,36 @@ const data = [
 const Component = () => {
 
     return (
-        <table className='table'>
-            <thead>
-                <tr>
-                    <th >Product Name</th>
-                    <th >Stock</th>
-                    <th >Price</th>
-                    <th >Total Sales</th>
-                </tr>
-            </thead>
-            <tbody>
-                {data.map((item) => {
-                    return (
-                        <tr>
-                            <td>
-                                {item.img}
-                                <div className="details">
-                                    <p className='name'>{item.name}</p>
-                                    <p className='text'>{item.text}</p>
-                                </div>
-                            </td>
-                            <td >{item.stock}</td>
-                            <td >{item.price}</td>
-                            <td >{item.totalsales}</td>
-                        </tr>
-                    )
-                })}
-
-
-            </tbody>
-        </table>
+        <div className="tablewrap">
+            <table className='table'>
+                <thead>
+                    <tr>
+                        <th >Product Name</th>
+                        <th >Stock</th>
+                        <th >Price</th>
+                        <th >Total Sales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((item) => {
+                        return (
+                            <tr>
+                                <td>
+                                    {item.img}
+                                    <div className="details">
+                                        <p p className='name' > {item.name}</p >
+                                        <p className='text'>{item.text}</p>
+                                    </div >
+                                </td >
+                                <td >{item.stock}</td>
+                                <td >{item.price}</td>
+                                <td >{item.totalsales}</td>
+                            </tr >
+                        )
+                    })}
+                </tbody >
+            </table >
+        </div>
     );
 };
 

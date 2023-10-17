@@ -96,6 +96,7 @@ const Main = () => {
                                     display: false
                                 }
                             },
+
                             scales: {
                                 x: {
                                     grid: {
@@ -134,7 +135,7 @@ const Main = () => {
                                     {
                                         backgroundColor: ['#b9b6c8', '#d41578', '#653de9'],
                                         data: [60, 20, 80],
-                                        borderWidth: [10, 3, 1],
+                                        borderWidth: [7, 3, 1],
                                     },
                                 ],
                             }}
@@ -155,9 +156,6 @@ const Main = () => {
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
             <div className="datatable">
                 <div className="searchbar">
@@ -170,7 +168,9 @@ const Main = () => {
                         <p className='blocktext'>last 30 days<FontAwesomeIcon icon={faChevronDown} className='arrow' /></p>
                     </div>
                 </div>
-                <Component />
+                <div style={{ overflowX: "auto" }}>
+                    <Component />
+                </div>
             </div>
         </div>
     )

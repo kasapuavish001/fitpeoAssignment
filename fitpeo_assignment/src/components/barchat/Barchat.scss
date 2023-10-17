@@ -1,0 +1,15 @@
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        /* or any other percentage */
+    }
+}
+
+/* For tablets and larger devices */
+@media screen and (min-width: 481px) {
+    .container {
+        width: 75%;
+        /* or any other percentage */
+    }
+}
