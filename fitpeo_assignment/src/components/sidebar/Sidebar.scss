@@ -1,19 +1,55 @@
 @import '../../styles/_mixin.scss';
 
+
+.mobilemenu {
+    display: none;
+
+    @include mobile {
+        display: block;
+        background-color: #040440;
+        padding: 10px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}
+
+.mobileview {
+    left: 0 !important;
+    transition: all .2s;
+}
+
 .sidebar {
     background-color: #040440;
     color: #fff;
     position: fixed;
     width: 250px;
     padding: 20px;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all .3s;
+
+    @include mobile {
+        height: 100%;
+        position: absolute;
+        z-index: 999;
+        left: -500px;
+        padding: 10px;
+        top: 0;
+    }
 
     .heading {
         font-size: 18px;
         font-weight: 500;
+
+        @include mobile {
+            display: none;
+        }
+
     }
 
     .icon {
@@ -21,7 +57,12 @@
     }
 
     ul {
+
         padding-top: 30px;
+
+        @include mobile {
+            padding: 0;
+        }
 
         li {
             padding: 5px 3px;

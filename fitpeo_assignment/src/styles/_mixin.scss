@@ -1,17 +1,4 @@
-
-$colors: (
-    bg: #171630,
-    primary: #e56736,
-    Secondary: #d2537c,
-    White: #ffffff,
-    text: #1f1e42,
-    lighttext: #67717d
-);
-
-$primaryFont: 'Open Sans';
-$ptsans:'PT Sans';
-
-$sm: 767px;
+$sm: 768px;
 $md: 992px;
 $lg: 1024px;
 $lgl: 1228px;
@@ -88,11 +75,13 @@ $xl: 1441px;
         @content;
     }
 }
+
 @mixin xl-tiny {
     @media (max-width:375px) {
         @content;
     }
 }
+
 @function color($color-name) {
     @return map-get($colors, $color-name);
 }
